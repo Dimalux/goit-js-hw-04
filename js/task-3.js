@@ -1,18 +1,24 @@
 'use strict';
 
-function filterArray(numbers, value) {
-  let result = [];
+// function getAllPropValues(propName) {
+// 	const products = [
+// 	  { name: "Radar", price: 1300, quantity: 4 },
+// 	  { name: "Scanner", price: 2700, quantity: 3 },
+// 	  { name: "Droid", price: 400, quantity: 7 },
+// 	  { name: "Grip", price: 1200, quantity: 9 },
+// 	];
 
-  for (let i = 0; i <= numbers.length; i += 1) {
-    if (numbers[i] > value) {
-      result.push(numbers[i]);
-    }
-  }
-  return result;
-}
+//   let titles = [];
+//   console.log(titles);
 
-console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
-console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
-console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
-console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
-console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
+//   for (const product of products) {
+// 	if (product[propName] === propName) {
+
+// 	  titles.push(product.propName);
+//   }
+// 	}
+//   return titles;
+
+//   }
+
+//   getAllPropValues("price");
