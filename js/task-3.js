@@ -1,24 +1,27 @@
 'use strict';
 
-// function getAllPropValues(propName) {
-// 	const products = [
-// 	  { name: "Radar", price: 1300, quantity: 4 },
-// 	  { name: "Scanner", price: 2700, quantity: 3 },
-// 	  { name: "Droid", price: 400, quantity: 7 },
-// 	  { name: "Grip", price: 1200, quantity: 9 },
-// 	];
+const profile = {
+  username: 'Jacob',
+  playTime: 300,
 
-//   let titles = [];
-//   console.log(titles);
+  changeUsername(newName) {
+    this.username = newName;
+  },
+  updatePlayTime(hours) {
+    this.playTime = this.playTime + hours;
+  },
+  getInfo() {
+    return `${this.username} has ${this.playTime} active hours!`;
+  },
+  
+};
 
-//   for (const product of products) {
-// 	if (product[propName] === propName) {
 
-// 	  titles.push(product.propName);
-//   }
-// 	}
-//   return titles;
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
-//   }
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
 
-//   getAllPropValues("price");
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
