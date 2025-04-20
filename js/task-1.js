@@ -7,19 +7,12 @@ function isEnoughCapacity(products, containerSize) {
     values.push(products[key]);
   }
 
-  // console.log(values);
-
   let sum = 0;
   for (let i = 0; i < values.length; i += 1) {
     sum = sum + values[i];
   }
-  // console.log(sum);
 
-  if (sum <= containerSize) {
-    return 'True';
-  } else {
-    return 'false';
-  }
+  return sum <= containerSize;
 }
 
 console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
